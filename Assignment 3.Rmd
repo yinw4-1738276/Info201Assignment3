@@ -1,0 +1,45 @@
+---
+title: "Assignment 3"
+author: "Yin Wang"
+date: "11/21/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r include=FALSE}
+library(knitr)
+source("/Users/yin/assignment-3---incarceration-yinw4-1738276/Assignment3.R")
+```
+
+
+# Introduction
+This is a report about incarceration in the U.S. focusing on the how data in different states might be different
+
+
+## 5 relevant values of interest
+1) How much has gender difference change over the last 48 years?
+2)
+3)
+4)
+5)
+geom_line(aes(x = year, y = white, colour = "White"))+
+## Time Trend Chart
+```{r echo=FALSE}
+ggplot(race_df) +
+  geom_line(aes(x = year, y = latin, colour = "Latin")) +
+  geom_line(aes(x = year, y = black, colour = "Black")) +
+  geom_line(aes(x = year, y = aapi, colour = "Asian American")) +
+  geom_line(aes(x = year, y = native, colour = "Native American")) +
+  labs(title = "Total popultaion of different race over the last 30 years", x = "year", y = "popultaion")
+```
+
+This line chart shows the incarceration of different races in the past 30 years.
+
+## Variable Comparison Chart
+
+
+
+
