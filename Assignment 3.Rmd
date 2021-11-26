@@ -16,29 +16,48 @@ source("/Users/yin/assignment-3---incarceration-yinw4-1738276/Assignment3.R")
 
 
 # Introduction
-This is a report about incarceration in the U.S. focusing on the how data in different states might be different
+This is a report analyzing the incarceration in the U.S. using a dataset from *Vera* with county-level data on prison and jail incarceration and related measures from 1970 to 2018 for the entire United States. The total population in the US has been increasing, so has the incarceration rate. Here, I'll be focusing specifically on jail incarceration rate, and present my findings in the following paragraph along with three charts for better understanding the observations from this dataset.
+
+Since the 1970, the rate of jail incarceration in the US has expanded `r increase` times, where the top three states that has the highest increasing incarceration rate are Texas, Louisiana, and Virginia. If we look at the total jail incarceration per total US population each year, we would see that the ratio keeps increasing until 2008 where it reaches a maximum and started to go down. Focusing on the time from 2008 to 2018 we found out that the total *male* population in jail has decreased `r percent_male_decrease`% while the total *female* population in jail has increased `r percent_female_increase`% (see chart 2 for more information). Also, the jail incarceration rate increased by `r white`% for *whites* and decreased by `r black`% for *blacks*(see chart1 for more information). 
 
 
-## 5 relevant values of interest
-1) How much has gender difference change over the last 48 years?
-2)
-3)
-4)
-5)
-geom_line(aes(x = year, y = white, colour = "White"))+
 ## Time Trend Chart
 ```{r echo=FALSE}
-ggplot(race_df) +
-  geom_line(aes(x = year, y = latin, colour = "Latin")) +
-  geom_line(aes(x = year, y = black, colour = "Black")) +
-  geom_line(aes(x = year, y = aapi, colour = "Asian American")) +
-  geom_line(aes(x = year, y = native, colour = "Native American")) +
-  labs(title = "Total popultaion of different race over the last 30 years", x = "year", y = "popultaion")
+ch1
 ```
 
-This line chart shows the incarceration of different races in the past 30 years.
+This line chart shows the jail incarceration rate by race in the past 30 years. 
+Two major observations here are, first, while the rate for Balck, Hispanic, and Asian started to decrease 2008, the incarceration rate of white people swas increasing. Second, the incarceration rate of black people has been decreasing **significantly** after 2004 and 2008.
+
 
 ## Variable Comparison Chart
+```{r echo = FALSE}
+ch2
+```
+
+The male jail inmate population decreased 9%
+from 2008 to 2018, while the female inmate
+population increased 15%. 
+Here, I'm comparing the total male and female jail population throughout the years. I also included the total population there as an reference. We can see that starting from 2008, the total population started to go down, however, it's interesting to see that comparing to how much the total male population went down, the total female population only went down for an insignificant amount.
+
+
+## Map
+```{r echo = FALSE}
+ch3
+```
+
+Here, I'm using the state as the unit of analysis to understand the broad contours of incarceration in the US. These shades of purple represent the total jail population rate, and as you can see the darker the color the higher the rate and vice versa. As we can see Texas, Louisiana, Virginia, Kentucky, and Gerogia are the five states that has the highest jail population rate and they are all sorta on the south-east (mainly south) side of the US. It's be interesting to see the ethnicity of those incarcerated people and see if we can find some pattern there.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
